@@ -10,6 +10,7 @@ Server will be running at `localhost:3000`
 
 ### Endpoints 
 For test `id` - 1234 || 1235
+
 GET `/vehicles/:id/battery` - get battery level
 
 GET `/vehicles/:id` - get vehicle info
