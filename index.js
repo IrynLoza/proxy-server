@@ -4,8 +4,8 @@ const routes = require('./routes');
 // create server
 const app = express();
 
-// middleware function to handle parse application/json
-// bodyParser module to handle body in http POST requests
+/* middleware function to handle parse application/json
+bodyParser module to handle body in http POST requests */
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
