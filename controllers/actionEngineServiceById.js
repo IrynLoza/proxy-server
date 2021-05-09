@@ -24,7 +24,7 @@ module.exports = (req, res, next) => {
   all callback functions have error as the first parameter */
   return actionEngineService(id, action, (err, response) => {
     if (err) return next(err);
-    // close request, send response to client
+    // close request and send response to client
     res.send(response);
   });
 };

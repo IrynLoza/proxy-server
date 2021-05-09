@@ -17,7 +17,7 @@ module.exports = (req, res, next) => {
   return getSecurityStatusService(id, (err, response) => {
     if (err) return next(err);
 
-    // close request, send response to client
+    // close request and send response to client
     res.send(response);
   });
 };

@@ -18,7 +18,7 @@ router.get('/vehicles/:id/doors', getSecurityStatusServiceById);
 router.get('/vehicles/:id/fuel', getVehicleFuelById);
 router.post('/vehicles/:id/engine', actionEngineServiceById);
 
-/* middleware function for routers, handle errors from next
+/* middleware function, handle errors from next
 single place for handling all errors */
 router.use((err, req, res, next) => {
   if (err) {
@@ -27,7 +27,7 @@ router.use((err, req, res, next) => {
   next();
 });
 
-// middleware function for routers, handle 404 status code
+// middleware function, handle 404 status code
 router.use((req, res) => res.status(404).send({ message: 'Endpoint is not found' }));
 
 module.exports = router;
