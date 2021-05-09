@@ -23,7 +23,7 @@ module.exports = (id, action, callback) => {
     // error should be checked first
     if (error) return callback(error);
 
-    // modify response from GM API to Smartcar API requirements
+    // modify response from GM API to vehicle API requirements
     const statusHash = { EXECUTED: 'success', FAILED: 'error' };
     // return response to controller
     return callback(null, { status: statusHash[response.actionResult.status] });

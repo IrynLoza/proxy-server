@@ -22,7 +22,7 @@ module.exports = (id, type, callback) => {
     // error should be checked first
     if (error) return callback(error);
 
-    /* modify response from GM API to Smartcar API requirements
+    /* modify response from GM API to vehicle API requirements
     return response to controller */
     if (type === 'fuel') {
       if (response.data.tankLevel.value === 'null') {
